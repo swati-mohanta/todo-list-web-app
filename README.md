@@ -1,4 +1,3 @@
-```md
 # 📝 To-Do List Web App
 
 ## 📌 Project Overview
@@ -40,4 +39,4 @@ git clone [https://github.com/swati-mohanta/todo-list-web-app.git](https://githu
 2. Open `index.html` in your browser
 
 ## 🎓 Internship Note
-This project was developed as part of my **Summer Internship in Web Development**, focusing on improving frontend skills and JavaScript logic.
+This project was developed as part of my Summer Internship in Web Development, focusing on improving frontend skills and JavaScript logic.
