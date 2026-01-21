@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="assets/Logo.png" alt="To-Do Logo" class="app-logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="tasks.html">Tasks</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+    <!-- Dark Mode Toggle -->
+  <div class="dark-mode-toggle">
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle" />
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+  <!-- ✅ Only one banner -->
+  <div class="banner" id="landingBanner">
+    <h1>Welcome to Your To-Do App</h1>
+    <p>Organize your tasks easily and boost your productivity.</p>
+    <button onclick="window.location.href='tasks.html'" class="hero-btn">
+      Get Started
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="main.js" defer></script>
+  <script src="darkmode.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const hideButton = document.getElementById("enter-btn");
+      if (hideButton) {
+        hideButton.addEventListener("click", () => {
+          document.getElementById("landingBanner").style.display = "none";
+        });
+      }
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Swati. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

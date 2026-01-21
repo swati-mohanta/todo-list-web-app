@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasks | Smart To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="assets/Logo.png" alt="App Logo" class="app-logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tasks.html" class="active">Tasks</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="dark-mode-toggle">
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle" />
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+  <main class="app-container">
+    <h1>My Tasks</h1>
+
+    <div class="input-container">
+      <input type="text" id="task-input" placeholder="Enter a task..." />
+      <select id="task-category">
+        <option value="General">General</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Urgent">Urgent</option>
+      </select>
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div class="category-controls">
+      <select id="filterCategory" onchange="filterTasks()">
+        <option value="All">All Categories</option>
+        <option value="General">General</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Urgent">Urgent</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Search tasks..." oninput="searchTasks()" />
+    </div>
+
+    <ul id="task-list"></ul>
+  </main>
+
+  <footer style="text-align:center; padding: 20px; font-size: 0.9em; color: #888;">
+    &copy; 2025 Smart To-Do App. All rights reserved.
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="darkmode.js"></script>
+</body>
+</html>

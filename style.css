@@ -1,0 +1,508 @@
+/* =============================
+   Reset and Base Setup
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  background-image: url(assets/bgd.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  color: #333;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-image: url(assets/dark-backgnd.jpg);
+  background-color: #121212;
+  color: #fff;
+}
+
+/* =============================
+   Navbar Styles
+============================= */
+.navbar {
+  text-align: center;
+  padding: 20px 0 10px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+body.dark .navbar {
+  background-color: #222;
+}
+
+.logo-container {
+  margin-bottom: 10px;
+}
+
+.app-logo {
+  width: 200px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #4CAF50;
+  text-decoration: underline;
+}
+
+body.dark .nav-links li a {
+  color: #fff;
+}
+
+/* =============================
+   Landing Banner Styles
+============================= */
+.banner {
+  background: url('assets/banner-background.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: brightness(0.8);
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.banner p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.banner button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 14px 30px;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.banner button:hover {
+  background-color: #388E3C;
+}
+
+/* =============================
+   Home Banner Section (if any)
+============================= */
+.home-banner {
+  text-align: center;
+  padding: 80px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+.home-banner h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.home-banner p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.home-banner button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.home-banner button:hover {
+  background-color: #388E3C;
+}
+
+/* =============================
+   Quick Summary Section
+============================= */
+.quick-summary {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.quick-summary h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quick-summary ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.quick-summary li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+body.dark .quick-summary {
+  background: #1e1e1e;
+  color: #ddd;
+}
+
+/* =============================
+   Footer Styles
+============================= */
+footer {
+  text-align: center;
+  padding-top: 10px;
+  color: #272525;
+  margin-top: 20px;
+}
+
+body.dark footer {
+  color: #aaa;
+}
+
+/* =============================
+   App Container (For Forms, Lists)
+============================= */
+.app-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark .app-container {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+/* =============================
+   Form Inputs and Buttons
+============================= */
+.input-container,
+.category-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+body.dark input[type="text"],
+body.dark select {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+body.dark input[type="text"]::placeholder {
+  color: #aaaaaa;
+}
+
+body.dark button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+}
+
+body.dark button:hover {
+  background-color: #45a049;
+}
+
+/* =============================
+   Task List Styles
+============================= */
+#task-list {
+  list-style: none;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+
+#task-list li {
+  background: white;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark #task-list li {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+.task-buttons button {
+  margin-left: 10px;
+}
+
+body.dark .task-buttons button {
+  background-color: #333;
+  color: #fff;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+#task-list li .category {
+  font-size: 14px;
+  color: #888;
+  margin-left: 10px;
+}
+
+.category-badge {
+  display: inline-block;
+  background: #eee;
+  color: #444;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  margin-top: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-General { background: #d1ecf1; color: #0c5460; }
+.category-Work { background: #f8d7da; color: #721c24; }
+.category-Personal { background: #d4edda; color: #155724; }
+.category-Urgent { background: #fff3cd; color: #856404; }
+
+body.dark .category-badge {
+  background: #333;
+  color: #fff;
+}
+
+body.dark .category-General { background: #2c5d63; color: #aee1e1; }
+body.dark .category-Work { background: #5d2e2e; color: #f4aaaa; }
+body.dark .category-Personal { background: #264d3e; color: #b9fbc0; }
+body.dark .category-Urgent { background: #4d4420; color: #ffdf91; }
+
+/* =============================
+   Dark Mode Toggle Switch
+============================= */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.about-box {
+  background-color: #f9f1f0;
+  color: #333;
+  border: 1px solid #f8afa6;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-box h1, .about-box h2 {
+  margin-top: 0;
+}
+
+.mini-box-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.mini-box {
+  background-color: #fadcd9;
+  color: #333;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 120px; /* min-width of box */
+  max-width: 150px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styling */
+body.dark-mode .mini-box {
+  background-color: #222;
+  color: #eee;
+}
+
+
+body.dark-mode .about-box {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+
+body.dark-mode .about-box h1,
+body.dark-mode .about-box h2,
+body.dark-mode .about-box p,
+body.dark-mode .about-box li {
+  color: #f0f0f0;
+}
+
+
+/* =============================
+   Responsive Adjustments
+============================= */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .banner {
+    padding: 50px 15px;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .banner p {
+    font-size: 1.2rem;
+  }
+
+  .banner button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .app-container {
+    margin: 20px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar {
+    padding: 15px 10px;
+  }
+}
